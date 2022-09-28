@@ -38,7 +38,15 @@ public class Drop extends ApplicationAdapter {
 
 	@Override
 	public void render () {
-		 ScreenUtils.clear(0, 0, 0.2f, 1);
+		//clearing the screen with a dark blue color
+		ScreenUtils.clear(0, 0, 0.2f, 1);
+		//updating camera
+		camera.update();
+		//rendering the bucket
+		batch.setProjectionMatrix(camera.combined);
+		batch.begin();
+		batch.draw(bucketImage, bucket.x, bucket.y);
+		batch.end();
 	}
 	
 	@Override
