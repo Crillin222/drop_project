@@ -27,15 +27,18 @@ public class Drop extends ApplicationAdapter {
 		batch = new SpriteBatch();
 		//stantiating the bucket and giving it value
 		bucket = new Rectangle();
+		//centering the bucket horizontally 
 		bucket.x = 800 / 2 - 64 / 2;
+		//placing bucket 20 pixels above the bottom edge of the screen
 		bucket.y = 20;
+		//bucket size
 		bucket.width = 64;
 		bucket.height = 64;
 	}
 
 	@Override
 	public void render () {
-		ScreenUtils.clear(1, 0, 0, 1);
+		 ScreenUtils.clear(0, 0, 0.2f, 1);
 	}
 	
 	@Override
