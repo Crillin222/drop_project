@@ -18,6 +18,9 @@ public class Drop extends ApplicationAdapter {
 		//load the images for the droplet and the bucket, 64x64 pixels each
 		dropImage = new Texture(Gdx.files.internal("droplet.png"));
 		bucketImage = new Texture(Gdx.files.internal("bucket.png"));
+		//creating camera
+		camera = new OrthographicCamera();
+		camera.setToOrtho(false, 800, 400);
 	}
 
 	@Override
