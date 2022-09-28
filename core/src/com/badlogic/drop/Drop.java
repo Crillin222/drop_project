@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.ScreenUtils;
 
 public class Drop extends ApplicationAdapter {
@@ -12,6 +13,7 @@ public class Drop extends ApplicationAdapter {
 	private Texture bucketImage;
 	private OrthographicCamera camera;
 	private SpriteBatch batch;
+	private Rectangle bucket;
 	
 	@Override
 	public void create () {
@@ -21,6 +23,14 @@ public class Drop extends ApplicationAdapter {
 		//creating camera
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, 800, 400);
+		//stantiating spritebatch
+		batch = new SpriteBatch();
+		//stantiating the bucket and giving it value
+		bucket = new Rectangle();
+		bucket.x = 800 / 2 - 64 / 2;
+		bucket.y = 20;
+		bucket.width = 64;
+		bucket.height = 64;
 	}
 
 	@Override
